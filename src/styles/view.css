@@ -1,0 +1,12 @@
+/* styles/html.css */
+
+/* … olemassa olevat html & body -säännöt … */
+
+/* 4. Sisältökontti, joka kattaa body:n jälkeisen osan */
+main {
+    /* Layout + paint eristys + laiskarenderöinti vain näkyville osille */
+    contain: content;
+    content-visibility: auto;
+    contain-intrinsic-size: 100vh;  /* vara tilaa koko näkymälle */
+  }
+  

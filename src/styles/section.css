@@ -1,0 +1,6 @@
+.section-heavy {
+    contain: content;
+    content-visibility: auto;
+    contain-intrinsic-size: 400px 300px;
+  }
+  

@@ -1,0 +1,43 @@
+/* styles/html.css */
+
+/* 1. Täysi näkymän hallinta */
+html {
+    width: 100vw;                /* Vie koko leveyden */
+    height: 100vh;               /* Vie koko korkeuden */
+    min-width: 100vw;
+    min-height: 100vh;
+  
+    /* Scroll‑asetukset */
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    /* Taustaväri koko dokumentille */
+    background-color: var(--c-bg);
+  }
+  
+  /* 2. Body fixed keskelle ja maksimileveys */
+  body {
+    position: fixed;             /* Pidetään body aina paikallaan */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    width: 100%;                 /* Täysi leveys, kuitenkin rajoitettu max-widthillä */
+    max-width: 1200px;           /* Voit säätää tarpeen mukaan */
+    min-height: 100vh;           /* Varmistaa, että body täyttää pystysuunnassa */
+  
+    /* Scrollataan bodyssä pystysuunnassa */
+    overflow-y: auto;
+  
+    /* Värimaailma ja fontit */
+    font-family: var(--sans);
+    color: var(--c-txt);
+    background-color: transparent; /* tausta jo html:ssä */
+  }
+  
+  /* 3. Perus-fontti- ja riviväliasetukset */
+  html, body {
+    font-size: var(--txt-size);
+    line-height: var(--line);
+  }
+  

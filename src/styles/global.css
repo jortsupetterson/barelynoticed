@@ -1,0 +1,48 @@
+/* styles/global.css */
+
+/* 1) Globaalit säännöt ja muuttujat */
+:root {
+  /* värit */
+  --c-bg: #ffffff;
+  --c-txt: #111;
+  --c-1: #0066ff;
+  --c-2: #ff6600;
+  --c-mute: #666666;
+
+  /* Kirjoitusasu */
+  --sans: system-ui, sans-serif;
+  --mono: monospace;
+  --txt-size: 2vh;
+  --line: 1;
+
+  /* Välikoot */
+  --xss: 0.5vh;
+  --ss: 1vh;
+  --ms: 2vh;
+  --ls: 4vh;
+
+  /* Animaatiot */
+  --seamless: 0.3s ease-in-out;
+}
+
+/* Kaikkien elementtien laatikon koko periytyy box-sizing: border-box */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Perusfokus‑outline globaaliin käyttöön */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 2). Import elementti- ja roolikohtaisiin tiedostoihin */
+
+@import './html.css';
+@import './button.css';
+@import './input.css';
+@import './link.css';
+@import './navigation.css';
+@import './list.css';
+@import './image.css';
+/* Lisää tänne uusia tiedostoja tarpeen mukaan */

@@ -1,0 +1,53 @@
+/* styles/scrollbar.css */
+
+/* 1. Cross‑browser scrollbar sizing */
+html {
+    scrollbar-width: thin;                     /* Firefox */
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+  
+  /* 2. WebKit scrollbar styling */
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbar-track);  /* maintain hit area */
+  }
+  
+  /* 3. Hover & active feedback */
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary);
+  }
+  
+  html::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-secondary);
+  }
+  
+  /* 4. Accessibility & focus */
+  [role="scrollbar"] {
+    outline: none;
+  }
+  
+  [role="scrollbar"]:focus {
+    outline: 2px solid var(--color-primary);
+  }
+  
+  /* 5. Performance hints for scroll containers */
+  .scrollable {
+    /* Keep scrollable elements lightweight */
+    contain: layout paint;                     /* isolate layout & paint */
+    /* Lazy‑render offscreen content */
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
+    /* Prevent overscroll ripple to outer contexts */
+    overscroll-behavior: contain;
+  }
+  
