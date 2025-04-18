@@ -8,8 +8,8 @@
     "version": "1.0.0",
     "main": "rollup.config.js",
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Jori Lehtinen",
+    "license": "Mozilla Public License Version 2.0",
     "description": "",
     "devDependencies": {
         "@rollup/plugin-commonjs": "^28.0.3",
